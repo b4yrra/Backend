@@ -70,6 +70,8 @@ server.put("/books/:id", (req: Request, res: Response) => {
   res.send(book);
 });
 
+server.delete;
+
 server.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
 });
