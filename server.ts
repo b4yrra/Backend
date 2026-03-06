@@ -1,5 +1,4 @@
 import express, { Request, Response } from "express";
-import { title } from "node:process";
 
 let books = [
   {
@@ -19,10 +18,6 @@ const server = express();
 const PORT = 8080;
 
 server.use(express.json());
-
-server.get("/", (req: Request, res: Response) => {
-  console.log("Hello");
-});
 
 server.get("/books", (req: Request, res: Response) => {
   res.status(200).send(books);
@@ -69,8 +64,6 @@ server.put("/books/:id", (req: Request, res: Response) => {
 
   res.send(book);
 });
-
-server.delete;
 
 server.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
